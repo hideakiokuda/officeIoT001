@@ -7,6 +7,7 @@ var server = http.createServer( function( req, res ) {
     res.writeHead(200, { 'Content-Type' : 'text/html' }); // ヘッダ出力
     res.end( fs.readFileSync('./index.html', 'utf-8') );  // index.htmlの内容を出力
 }).llisten(process.env.PORT || 3000);
+console.log('Server started.');
 
 // サーバーをソケットに紐付ける
 var io = socketio.listen( server );
