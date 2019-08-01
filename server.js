@@ -46,18 +46,21 @@ io.sockets.on( 'connection', function( socket ) {
 
     // ボタン2に関するクライアントからサーバーへデータ送信ハンドラ
     socket.on( 'btn2_message', function( data ) {
+        console.log('Receive button2.');
     // テキストボックス2に関してサーバーからクライアントへデータを送り返し
     io.sockets.emit( 'rtn2_message', { value : data.value } );
     });
 
     // ボタン3に関するクライアントからサーバーへデータ送信ハンドラ
     socket.on( 'btn3_message', function( data ) {
+        console.log('Receive button3.');
     // テキストボックス3に関してサーバーからクライアントへデータを送り返し
     io.sockets.emit( 'rtn3_message', { value : data.value } );
     });
 
     // ボタン4に関するクライアントからサーバーへデータ送信ハンドラ
     socket.on( 'btn4_message', function( data ) {
+        console.log('Receive button4.');
     // テキストボックス4に関してサーバーからクライアントへデータを送り返し
     io.sockets.emit( 'rtn4_message', { value : data.value } );
     });
