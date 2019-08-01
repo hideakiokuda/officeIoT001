@@ -9,6 +9,26 @@ var server = http.createServer( function( req, res ) {
 }).llisten(process.env.PORT || 3000);
 console.log('Server started.');
 
+
+
+// GET method route
+app.get('/', function (req, res) {
+  res.send('GET request to the homepage')
+})
+
+// POST method route
+app.post('/sensor',jsonParser,function (req, res) {
+  res.send('POST request received by server');
+  var decoded_payload = new Buffer(req.body.payload_raw, 'base64').toString('ascii')
+  sendMessage({ content:decoded_payload, nickname:"sensor"});
+  console.log(req.body);
+  console.log(decoded_payload);
+})
+
+
+
+
+
 // サーバーをソケットに紐付ける
 var io = socketio.listen( server );
 
