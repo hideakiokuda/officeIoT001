@@ -40,7 +40,8 @@ io.sockets.on( 'connection', function( socket ) {
     socket.on( 'btn1_message', function( data ) {
         console.log('Receive button1.');
     // テキストボックス1に関してサーバーからクライアントへデータを送り返し
-    io.sockets.emit( 'rtn1_message', { value : data.value } );
+    //io.sockets.emit( 'rtn1_message', { value : data.value } );
+    io.sockets.emit( 'rtn1_message', { "Test" } );
     console.log('Return of button1.');
     });
 
