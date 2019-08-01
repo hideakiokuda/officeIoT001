@@ -39,6 +39,7 @@ io.sockets.on( 'connection', function( socket ) {
     socket.on( 'btn1_message', function( data ) {
     // テキストボックス1に関してサーバーからクライアントへデータを送り返し
     io.sockets.emit( 'rtn1_message', { value : data.value } );
+    console.log('Return of button1.');
     });
 
     // ボタン2に関するクライアントからサーバーへデータ送信ハンドラ

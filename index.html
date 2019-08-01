@@ -98,6 +98,7 @@
         $("#messageForm").val("");
         // クライアントからサーバーへ送信
         ioSocket.emit( "btn1_message", { value : message } );
+        console.log('Click button1.');
     });
 
     // ボタン1に関するサーバーからクライアントへの送り返し
