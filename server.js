@@ -41,7 +41,7 @@ io.sockets.on( 'connection', function( socket ) {
         console.log('Receive button1.');
     // テキストボックス1に関してサーバーからクライアントへデータを送り返し
     //io.sockets.emit( 'rtn1_message', { value : data.value } );
-    io.sockets.emit( 'rtn1_message', { value : "Test" } );
+    io.sockets.emit( 'rtn1_message', { value : "Test1" } );
     console.log('Return of button1.');
     });
 
