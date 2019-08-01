@@ -34,6 +34,7 @@ var io = socketio.listen( server );
 
 // 接続確立後の通信処理部分を定義
 io.sockets.on( 'connection', function( socket ) {
+    console.log('--io.sockets.on--');
 
     // ボタン1に関するクライアントからサーバーへデータ送信ハンドラ
     socket.on( 'btn1_message', function( data ) {
