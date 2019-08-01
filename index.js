@@ -10,7 +10,7 @@ var server = http.createServer( function( req, res ) {
 console.log('Server started.');
 
 
-
+/*
 // GET method route
 app.get('/', function (req, res) {
   res.send('GET request to the homepage')
@@ -24,7 +24,7 @@ app.post('/sensor',jsonParser,function (req, res) {
   console.log(req.body);
   console.log(decoded_payload);
 })
-
+*/
 
 
 
